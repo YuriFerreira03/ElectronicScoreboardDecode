@@ -1,4 +1,4 @@
-# Decodificação do Controlador de Placar Eletrônico PC5-B
+# Decodificação do Controlador de Placar Eletrônico
 
 Este projeto visa decodificar o controlador do placar eletrônico **Tecnodis PC5-B** para permitir que ele seja controlado por um aplicativo móvel, substituindo o controle manual por um sistema digital. Utilizando Python e técnicas de engenharia reversa, é possível captar e interpretar os sinais enviados pelo controlador, permitindo que os comandos sejam enviados de forma programática.
 
@@ -14,5 +14,3 @@ O controlador **PC5-B**, comumente utilizado em ginásios para ajustar pontuaç�
 - **Breadboard e Jumpers**: usados para conectar o circuito e realizar prototipagem.
 - **Python**: linguagem de programação usada para decodificar e interpretar os sinais capturados.
 - **VS Code**: ambiente de desenvolvimento utilizado para execução do código.
-
----
