@@ -22,8 +22,26 @@ from Botoes_Cronometro.botao_prog_reset import decodificar_reset_rapido
 from Botoes_Alarme_Periodo.botao_alarme import decodificar_vigessimo_segundo
 from Botoes_Alarme_Periodo.botao_periodo import decodificar_sexto
 
+# def crc8(data, poly=0x01, init=0x80, width=8):
+#     crc = init
+    
+#     for byte in data:
+#         crc ^= byte
+        
+#         for _ in range(width):
+#             if crc & 0x80:  # Se o bit mais significativo for 1
+#                 crc = (crc << 1) ^ poly  # Shift e XOR com o polinômio
+#             else:
+#                 crc <<= 1  # Caso contrário, apenas shift
+#             crc &= 0xFF  # Garante que o CRC permanece dentro de 8 bits
+
+#     return crc
+
 # Configuração da porta serial
-ser = serial.Serial('/dev/tty.usbserial-110', 9600)
+ser = serial.Serial('/dev/tty.usbserial-58BA1184401', 9600)
+#ser = serial.Serial('/dev/ttyACM0', 9600)
+#ser = serial.Serial('/dev/ttyUSB0', 9600)
+
 print("Pegando um padrão de pacotes")
 
 # Parâmetros de configuração
@@ -89,6 +107,8 @@ while True:
             f"Pacote: {formatar_em_hexa(pacote)}\n"
             f"========================================\n"
         )
+        # crc_result = crc8(pacote[0:24])
+        # print(f" medido {pacote[24]:02X}")
     else:
         print(f"Pacote normal: {formatar_em_hexa(pacote)}\n")
         
