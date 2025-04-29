@@ -1,4 +1,4 @@
-# para rodar o programa coloque : ./run.sh
+# para rodar o programa coloque : python3 -m venv support/venv, source support/venv/bin/activate, ./run.sh
 
 import serial  # type: ignore
 import time
@@ -38,7 +38,7 @@ from Botoes_Alarme_Periodo.botao_periodo import decodificar_sexto
 #     return crc
 
 # Configuração da porta serial
-ser = serial.Serial('/dev/tty.usbserial-58BA1184401', 9600)
+ser = serial.Serial('/dev/cu.usbserial-58BA1184401', 9600)
 #ser = serial.Serial('/dev/ttyACM0', 9600)
 #ser = serial.Serial('/dev/ttyUSB0', 9600)
 
