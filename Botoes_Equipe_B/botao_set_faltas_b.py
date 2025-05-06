@@ -2,8 +2,16 @@
 
 # Dicionários para decodificar a pontuação de Set/Faltas
 pontuacao_decimo_sexto_byte = {
-    b'\xbf': 0,
+    b'\xbf': 0,  # zero tens
     b'\x31': 1,
+    b'\x32': 2,
+    b'\xb3': 3,
+    b'\x34': 4,
+    b'\xb5': 5,
+    b'\xb6': 6,
+    b'\x37': 7,
+    b'\x38': 8,
+    b'\xb9': 9,
 }
 pontuacao_decimo_oitavo_byte = {
     b'\xb0': 0,
